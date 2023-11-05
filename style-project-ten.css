@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+  }
+  /* website header title */
+  .header {
+    padding: 40px;
+    text-align: center;
+    background:#42aff7;
+    color: white;
+  }
+  .header h1 {
+    font-size: 50px;
+  }
+  /* four columns that floats next to each other */
+  /* left column (About The SDS Times*/
+  .leftcolumn {   
+    float: left;
+    width: 20%;
+    text-align: justify;
+    background-color: beige;
+  }
+  .editor-choice-header{
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+  /* hot news  (left center column the whole column including news and its new title)*/
+  .hotnews{ 
+    background-color: #f1f1f1;
+    color: red;
+    font-size: 20px;
+  }
+  /* top story (right center column, the whole column including the story and title of story) */
+  .topstory{
+    background-color: #f1f1f1;
+    color: dodgerblue;
+    font-size: 20px;
+  }
+  /* right column  (List of Linked Wbsites)*/
+  .rightcolumn {
+    float: right;
+    width: 20%;
+    background-color: orange;
+    /*background-color: #f1f1f1;*/
+    padding-left: 20px;
+    color: black;
+  }
+  /* Center column left*/
+  .centercolumnleft {
+      float: left;
+      width: 30%;
+      background-color:#f1f1f1;
+      padding-left: 20px;
+      text-align: justify;
+    }
+    /* Center column right */
+  .centercolumnright {
+      float: right;
+      width: 30%;
+      background-color:#f1f1f1;
+      padding-left: 20px;
+      text-align: justify;
+    }
+  /* hot news header, color, background, font size*/
+  .hotnewsheader{
+    background-color: orange;
+    color: white;
+    text-align: center; 
+  }
+  /*top story header, color, background, font size*/
+  .topstoryheader{
+    background-color: orange;
+    color: white;
+    text-align: center;
+  }
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #42aff7;
+    margin-top: 20px;
+  }
+  /* Responsive layout - when the screen is less than 800px wide, make the four columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn, .centercolumnleft, .centercolumnright{   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  .nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   /* background-color: #08a4d8;*/
+   background-color: #22577a;
+  }
+  .nav-menu {
+    float: left;
+  }
+  .nav-menu a {
+    display: inline;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .nav-menu a:hover:not(.active) {
+    background-color: #111;
+  }
+  .active {
+    background-color: #f1500b;
+  }
+  li {
+    display: inline;
+  }
+  .card-title{
+    color: #42aff7;
+  }
+  /* GOOGLE Ad css starts below this line*/ 
+  .column{
+    display: grid;
+    /*grid-template-columns: auto auto auto auto;*/
+    grid-gap: 10px;
+    background-color: rgb(57, 50, 50);
+    border: solid rgb(238, 125, 125);
+    width: 250px;
+    height: 620px;
+    color: white;
+  }
+  .header1{
+    background-color: red;
+    width: 245px;
+    padding: .1px;
+    margin: 0px;
+    text-align: center;
+  }
+  .header2{
+    background-color: black;
+    width: 250px;
+    padding: 0px;
+    margin: 10px;
+    border: solid  black;
+    width: 220px;
+    height: 100px;
+    text-align: center;
+    color: white;
+  }
+  .header2 :hover{
+    background-color: yellow;
+    color: red;
+  }
+  .header3{ 
+    color: red;
+    background-color: whitesmoke;
+    width: 245px;
+    text-align: center;
+  }
+  .header4{ 
+    text-align: center;
+    color: goldenrod;
+  }
+  .header4 :hover{ 
+    background-color: black;       
+  }
+  .header5{ 
+    text-align: center;
+    color: yellow;
+  }
+  .header5 :hover{ 
+    background-color:red;
+  }
+  .header6{ 
+    text-align: center;
+    color: red;
+    padding: 0px;
+  }
+   /*GOOGLE Ad css ends here*/
+
+  /*image slider portion of css starts below this line*/
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: all 0.4s ease-in;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 1.25rem;
+  }
+  .container {
+    display: grid;
+    width: 100%;
+    min-height: calc(100vh - 4.25rem);
+    place-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  .subtitle{
+    text-align: center;
+  }
+
+  #slider {
+    position: relative;
+    width: 500px;
+    height: 400px;
+  }
+  #slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+  }
+  #slider img.active {
+    opacity: 1;
+  }
+  /* button for image slider*/
+ button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: orange;
+    /*background-color: #717171;*/
+   
+    color: #f1f1f1;
+    font-size: 32px;
+    font-stretch: condensed;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+  }
+  button:hover {
+    background-color: steelblue;
+  }
+  button#prev {
+    left: -30px;
+    padding: 7px 17px 7px 15px;
+  }
+  button#next {
+    right: -30px;
+    padding: 7px 15px 7px 17px;
+  }
+
+   /*image slider portion of css ends here*/
+
+
+   /* test for fade and shade below this line*/
+  
+
+   .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .item:not(:first-child) {
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .item__content {
+    background-color: steelblue;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 7rem;
+    border-radius: 7px;
+  }
+  
+  .item > p {
+    text-align: center;
+  }
+  
+  .left {
+    transform-origin: left center;
+    transform: translateX(-50%);
+  }
+  
+  .right {
+    transform-origin: right center;
+    transform: translateX(50%);
+  }
+  
+  .slide-in {
+    opacity: 1 !important;
+    transform: translateX(0);
+  }
+
+  
+  /* CSS to style Contact Form start here .... CSS below this line is style for project 11 (Start)*/
+
+
+
+/* CSS to style Contact Form end here .... CSS above this line is style for project 11 (END)*/
+
+
+
+ 
